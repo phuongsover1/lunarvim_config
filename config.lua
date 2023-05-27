@@ -19,6 +19,11 @@ null_ls.setup({
   }
 })
 
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup({
+  { name = "beautysh" }
+})
+
 
 -- My Config
 lvim.builtin.theme.tokyonight.options.transparent = true
