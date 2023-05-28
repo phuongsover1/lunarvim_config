@@ -4,7 +4,8 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 lvim.plugins = {
-  { "shaunsingh/nord.nvim" }
+  { "shaunsingh/nord.nvim" },
+  { 'akinsho/git-conflict.nvim', version = "*", config = true }
 }
 
 -- Null-ls Config
@@ -25,10 +26,22 @@ formatters.setup({
 })
 
 
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup({
+  { name = "eslint_d" }
+})
+
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup({
+  { name = "eslint_d" }
+})
+
+
 -- My Config
 lvim.builtin.theme.tokyonight.options.transparent = true
 lvim.transparent_window = true
-lvim.colorscheme = "nord"
+--lvim.colorscheme = "nord"
 lvim.format_on_save.enabled = true
 
 
@@ -38,4 +51,3 @@ lvim.format_on_save.enabled = true
 -- Keymap
 -- Map jk to <Esc>
 lvim.keys.insert_mode["jk"] = "<Esc>"
-lvim.keys.insert_mode["<TAB>"] = false
