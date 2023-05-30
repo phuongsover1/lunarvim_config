@@ -5,7 +5,15 @@
 
 lvim.plugins = {
   { "shaunsingh/nord.nvim" },
-  { 'akinsho/git-conflict.nvim', version = "*", config = true }
+  { 'akinsho/git-conflict.nvim', version = "*",     config = true },
+  { 'rose-pine/neovim',          name = 'rose-pine' },
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end
+  }
+
 }
 
 -- Null-ls Config
@@ -41,7 +49,7 @@ linters.setup({
 -- My Config
 lvim.builtin.theme.tokyonight.options.transparent = true
 lvim.transparent_window = true
---lvim.colorscheme = "nord"
+lvim.colorscheme = "rose-pine"
 lvim.format_on_save.enabled = true
 
 
