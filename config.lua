@@ -69,7 +69,7 @@ linters.setup({
 -- My Config
 lvim.builtin.theme.tokyonight.options.transparent = true
 lvim.transparent_window = true
-lvim.colorscheme = "gruvbox"
+--lvim.colorscheme = "dracula"
 lvim.format_on_save.enabled = true
 vim.opt.relativenumber = true
 
