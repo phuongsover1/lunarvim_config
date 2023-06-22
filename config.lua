@@ -42,7 +42,7 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettierd.with({
       env = {
-        PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/bspwm/.prettierrc"),
+        PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/lvim/.prettierrc"),
       },
     }),
   }
@@ -69,9 +69,10 @@ linters.setup({
 -- My Config
 lvim.builtin.theme.tokyonight.options.transparent = true
 lvim.transparent_window = true
---lvim.colorscheme = "dracula"
+lvim.colorscheme = "nord"
 lvim.format_on_save.enabled = true
 vim.opt.relativenumber = true
+require("lvim.lsp.manager").setup("emmet_ls")
 
 
 
