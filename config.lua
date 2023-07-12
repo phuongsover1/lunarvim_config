@@ -34,6 +34,19 @@ lvim.plugins = {
     event = "BufRead",
     config = function() require "lsp_signature".on_attach() end,
   },
+  {
+    "shaunsingh/solarized.nvim"
+  },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  }
 }
 
 -- Null-ls Config
@@ -69,6 +82,7 @@ linters.setup({
 -- My Config
 lvim.builtin.theme.tokyonight.options.transparent = true
 lvim.transparent_window = true
+-- vim.opt.background = "light"
 lvim.colorscheme = "nord"
 lvim.format_on_save.enabled = true
 vim.opt.relativenumber = true
